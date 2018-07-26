@@ -1,0 +1,83 @@
+body {
+  background-color: #ff827b;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #C4F013;
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
+}
+
+.grid-submitted-words {
+  display: flex;
+  flex-direction: row;
+}
+
+.timer {
+  flex: 30%;
+}
+
+.grid {
+  flex: 40%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.submitted-words {
+  display: flex;
+  flex-direction: column;
+  flex: 30%;
+  list-style-type: none;
+}
+
+.word-list {
+  column-count: 3;
+  z-index: 1;
+  font-size: 18px;
+  color: black;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px grey;
+  background-color: yellow;
+  color: black;
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #5fbac2;
+}
+
+button {
+  margin: 15px;
+  margin-top: 40px;
+  background-color: #6adc78;
+  border: 1px solid black;
+  border-radius: 15px;
+  font-size: 30px;
+  font-family: 'Bad Script', cursive;
+}
+
+input {
+  text-align: center;
+  color: green;
+  font-size: 30px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.search-input {
+  margin-top: 25px;
+}
