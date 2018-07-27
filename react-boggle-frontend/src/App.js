@@ -17,7 +17,7 @@ class App extends Component {
       possibleWords: [],
       searchInput: "",
       submittedWords: [],
-      timer: 100,
+      gameOn: false,
     }
   }
 
@@ -35,17 +35,15 @@ class App extends Component {
           possibleWords,
           searchInput: "",
           submittedWords: [],
+          gameOn: !this.state.gameOn,
       }))
       this.populateBoard();
   }
 
-  startTimer = () => {
-    this.setState(prevState => ({
-      timer: this.interval,
-    }))
-  }
+
 
   populateBoard = () => {
+    console.log(this.state)
     const rows = this.createBoardRows();
     return rows.map(row => (
       <div key={UUID()} className="row">
@@ -90,13 +88,25 @@ class App extends Component {
     }
   }
 
+  renderTimer = () => {
+    if (this.state.gameOn) {
+      return (
+        <Timer timer={this.state.timer} />
+      )
+    } else {
+      return (
+        <div className="timer">*GAME OVER*</div>
+      )
+    }
+  }
+
   render() {
     console.log(this.state)
     return (
       <div className="app">
         <h1>Boggle</h1>
-        <div className="grid-submitted-words">
-          <Timer timer={this.state.timer}/>
+        <div className="grid-submitted-words-timer">
+          {this.renderTimer()}
           <div className="grid">
             {this.populateBoard()}
           </div>

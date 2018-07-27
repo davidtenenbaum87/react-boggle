@@ -11,12 +11,15 @@ body {
   font-family: 'Pacifico', cursive;
 }
 
-.grid-submitted-words {
+.grid-submitted-words-timer {
   display: flex;
   flex-direction: row;
 }
 
 .timer {
+  display: flex;
+  justify-content: center;
+  
   flex: 30%;
 }
 
